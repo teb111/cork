@@ -1,0 +1,32 @@
+#content .heading {
+  display: flex;
+  align-items: center;
+}
+
+#content .sub-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#content .sub-heading .sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#content .sub-heading .sub {
+  list-style-type: none;
+}
+
+#content .sub-heading #posts-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#content .table-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
