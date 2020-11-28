@@ -47,6 +47,8 @@
   <link href="plugins/bootstrap-range-Slider/bootstrap-slider.css" rel="stylesheet" type="text/css">
   <link href="assets/css/components/tabs-accordian/custom-tabs.css" rel="stylesheet" type="text/css" />
   <script src="plugins/flatpickr/custom-flatpickr.js"></script>
+  <link href="assets/css/components/tabs-accordian/custom-accordions.css" rel="stylesheet" type="text/css" />
+  <script src="https://kit.fontawesome.com/93365cca58.js" crossorigin="anonymous"></script>
   <!--  END CUSTOM STYLE FILE  -->
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
   </head>
@@ -977,7 +979,7 @@
                 </div>
           </div> <!-- clipboard ends-->
           <!-- Go cargo shipment history starts -->
-          <div class="col-lg-10 col-10 layout-spacing mt-3">
+          <div class="col-lg-12 col-12 layout-spacing mt-3 flex-table">
             <div class="statbox widget box box-shadow">
      <h4 class="mt-2">GoCargo Shipment History</h4>
      <form action="post" class="horizontal">
@@ -1029,229 +1031,333 @@
 
      
      </div>
-     </div>
-            <!-- Go cargo shipment information ends -->
-            <div class="col-lg-10 col-10 layout-spacing mt-3">
-                <div class="statbox widget box box-shadow">
-         <h4 class="mt-2">GoCargo Shipment Information</h4>
-         <form action="post" class="horizontal">
-            <div class="widget-content widget-content-area">
-                <ul class="nav nav-tabs  mb-3 mt-3 nav-fill" id="justifyTab" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="justify-home-tab" data-toggle="tab" href="#justify-home" role="tab" aria-controls="justify-home" aria-selected="true">Shipper Information</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="justify-profile-tab" data-toggle="tab" href="#justify-profile" role="tab" aria-controls="justify-profile" aria-selected="false">Receiver Information</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="justify-contact-tab" data-toggle="tab" href="#justify-contact" role="tab" aria-controls="justify-contact" aria-selected="false">Shipment Information</a>
-                    </li>
-                </ul>
-                
-                <div class="tab-content" id="justifyTabContent">
-                    <div class="tab-pane fade show active" id="justify-home" role="tabpanel" aria-labelledby="justify-home-tab">
-                        <label for="basic-url">Shipper Name</label>
-                        <div class="input-group mb-4">
-                          <textarea class="form-control" aria-label="With textarea"></textarea>
-                        </div>
-                       
-                        <label for="basic-url">Phone</label>
-                        <div class="input-group mb-5">
-                          <input type="text" class="form-control" placeholder="phone" aria-label="Date" aria-describedby="basic-addon2">
-                          
-                        </div>
 
-                        <label for="basic-url">Address</label>
-                        <div class="input-group mb-4">
-                          <textarea class="form-control" aria-label="With textarea"></textarea>
-                        </div>
-                        
-          
-                        <label for="basic-url">Email</label>
-                        <div class="input-group mb-4">
-                          <textarea class="form-control" aria-label="With textarea"></textarea>
-                        </div>
-
-                        <div class="n-chk">
-                            <label class="new-control new-checkbox checkbox-primary">
-                              <input type="checkbox" class="new-control-input" checked>
-                              <span class="new-control-indicator"></span>Show Shipper Information
-                        </div>
+     <!-- Shipment categories start -->
+     <div class="sidebar-container">
+     <div id="toggleAccordion">
+        <div class="card">
+            <div class="card-header" id="...">
+                <section class="mb-0 mt-0">
+                    <div role="menu" class="collapsed" data-toggle="collapse" data-target="#defaultAccordionOne" aria-expanded="true" aria-controls="defaultAccordionOne">
+                        Shipment Categories <div class="icons"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
                     </div>
-                    <div class="tab-pane fade" id="justify-profile" role="tabpanel" aria-labelledby="justify-profile-tab">
-                        <label for="basic-url">Receiver Name</label>
-                        <div class="input-group mb-4">
-                          <textarea class="form-control" aria-label="With textarea"></textarea>
-                        </div>
-                       
-                        <label for="basic-url">Phone</label>
-                        <div class="input-group mb-5">
-                          <input type="text" class="form-control" placeholder="phone" aria-label="Date" aria-describedby="basic-addon2">
-                          
-                        </div>
-
-                        <label for="basic-url">Address</label>
-                        <div class="input-group mb-4">
-                          <textarea class="form-control" aria-label="With textarea"></textarea>
-                        </div>
-                        
-          
-                        <label for="basic-url">Email</label>
-                        <div class="input-group mb-4">
-                          <textarea class="form-control" aria-label="With textarea"></textarea>
-                        </div>
-
-                        <div class="n-chk">
-                            <label class="new-control new-checkbox checkbox-primary">
-                              <input type="checkbox" class="new-control-input" checked>
-                              <span class="new-control-indicator"></span>Show Receiver Information
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="justify-contact" role="tabpanel" aria-labelledby="justify-contact-tab">
-                     
-                        <label for="basic-url">Weight</label>
-                        <div class="input-group mb-5">
-                          <input type="text" class="form-control" aria-label="Date" aria-describedby="basic-addon2">
-                          
-                        </div>
-
-                        <label for="basic-url">Courier</label>
-                        <div class="input-group mb-5">
-                          <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
-                          
-                        </div>
-
-                        <label for="basic-url">Packages</label>
-                        <div class="input-group mb-5">
-                          <input type="text" class="form-control" aria-label="Date" aria-describedby="basic-addon2">
-                          
-                        </div>
-
-                        <label for="basic-url">Mode</label>
-                        <div class="input-group mb-5">
-                          <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
-                          
-                        </div>
-
-                        <label for="basic-url">Product</label>
-                        <div class="input-group mb-5">
-                          <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
-                          
-                        </div>
-
-                        <label for="basic-url">Quantity</label>
-                        <div class="input-group mb-5">
-                          <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
-                          
-                        </div>
-
-                        <label for="basic-url">Payment Mode</label>
-                        <div class="input-group mb-5">
-                          <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
-                          
-                        </div>
-
-                        <label for="basic-url">Total Freight</label>
-                        <div class="input-group mb-5">
-                          <input type="text" class="form-control" aria-label="Date" aria-describedby="basic-addon2">
-                          
-                        </div>
-
-                        <label for="basic-url">Carrier</label>
-                        <div class="input-group mb-5">
-                          <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
-                          
-                        </div>
-
-                        <label for="basic-url">Carrier Reference Number</label>
-                        <div class="input-group mb-5">
-                          <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
-                          
-                        </div>
-
-                        <label for="basic-url">Departure Time</label>
-                        <div class="input-group mb-5">
-                          <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
-                          
-                        </div>
-
-                        <label for="basic-url">Orgin</label>
-                        <div class="input-group mb-5">
-                          <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
-                          
-                        </div>
-
-                        <label for="basic-url">Destination</label>
-                        <div class="input-group mb-5">
-                          <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
-                          
-                        </div>
-
-                        <label for="basic-url">Pickup Date</label>
-                        <div class="input-group mb-5">
-                          <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
-                          
-                        </div>
-
-                        <label for="basic-url">Pickup Time</label>
-                        <div class="input-group mb-5">
-                          <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
-                          
-                        </div>
-
-                        <label for="basic-url">Status</label>
-                        <div class="input-group mb-4">
-                          <select class="selectpicker" data-width="fit">
-                              <option value="pending">Pending</option>
-                              <option value="accepted">Accepted</option>
-                              <option value="processing">Processing</option>
-                              <option value="Delivered">Delivered</option>
-                              
-                          </select>
-                        </div>
-
-
-                        <label for="basic-url">Expected Delivery Date</label>
-                        <div class="input-group mb-5">
-                          <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
-                          
-                        </div>
-                        <label for="basic-url">Comments</label>
-                        <div class="input-group mb-4">
-                          <textarea class="form-control" aria-label="With textarea"></textarea>
-                        </div>
-
-                        
-                        <label for="basic-url">Agent Name</label>
-                        <div class="input-group mb-5">
-                          <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
-                          
-                        </div>
-
-                        
-                        <label for="basic-url">Type of Shipment</label>
-                        <div class="input-group mb-5">
-                          <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
-                          
-                        </div>
-                     
-
-                        <div class="n-chk">
-                            <label class="new-control new-checkbox checkbox-primary">
-                              <input type="checkbox" class="new-control-input" checked>
-                              <span class="new-control-indicator"></span>Show Shipment Information
-                        </div>
-                    </div>
-                </div>
-                       </div>
-            
-         </form>
+                </section>
+            </div>
     
-         
-         </div>
-         </div>
-                <!-- Go cargo shipment information ends -->
+            <div id="defaultAccordionOne" class="collapse" aria-labelledby="..." data-parent="#toggleAccordion">
+                <div class="card-body">
+                
+                    
+                  
+                        <div class="widget-content widget-content-area">
+                            <ul class="nav nav-tabs  mb-2 mt-1 nav-fill navigation" id="justifyTab" role="tablist">
+                                <li class="nav-item">
+                <a class="nav-link active text-size" id="justify-shipping-tab" data-toggle="tab" href="#justify-shipping" role="tab" aria-controls="justify-shipping-home" aria-selected="true">All shipment categories</a>
+                                </li>
+                               
+                                <li class="nav-item">
+                                    <a class="nav-link text-size" id="justify-contact-tab" data-toggle="tab" href="#justify-contact" role="tab" aria-controls="justify-contact" aria-selected="false">Most used</a>
+                                </li>
+                            </ul>
+                        </div>
+                  
+                
+                    <div class="tab-content" id="justifyTabContent">
+                        <div class="tab-pane fade show active" id="justify-shipping" role="tabpanel" aria-labelledby="justify-shipping-tab">
+                            <div class="input-group mb-4">
+                                <textarea class="form-control" aria-label="With textarea"></textarea>
+                              </div>
+                            </div>
+                
+                            <div class="tab-pane fade" id="justify-contact" role="tabpanel" aria-labelledby="justify-contact-tab">
+                                <div class="input-group mb-4">
+                                    <textarea class="form-control" aria-label="With textarea">something</textarea>
+                                  </div>  
+                            </div>
+                
+                        </div>
+                
+                        <form action="post" class="horizontal">
+                           <h4>Add New Shipment Category</h4>
+                           <div class="input-group mb-2">
+                            <input type="text" class="form-control" placeholder="" aria-label="Date" aria-describedby="basic-addon2">
+                            
+                          </div>
+                
+                          <div class="input-group mb-2">
+                            <select class="selectpicker" data-width="fit">
+                                <option value="Parent Shipment Category">Parent Shipment Category</option>
+                            </select>
+                
+                            <input type="submit" value="Add New Shipment Category" name="" class="btn btn-primary mb-2 mt-2">
+                    
+                          </div>
+                            </form>
+             
+    
+                </div>
+            </div>
         </div>
+     </div>
+     <!-- publish starts -->
+     <div id="toggleAccordion">
+        <div class="card">
+            <div class="card-header" id="...">
+                <section class="mb-0 mt-0">
+                    <div role="menu" class="collapsed" data-toggle="collapse" data-target="#defaultAccordionTwo" aria-expanded="true" aria-controls="defaultAccordionOne">
+                        Publish <div class="icons"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+                    </div>
+                </section>
+            </div>
+    
+            <div id="defaultAccordionTwo" class="collapse" aria-labelledby="..." data-parent="#toggleAccordion">
+                <div class="card-body">
+                    <button class="shadow-none badge outline-badge-primary add_field_button mb-2 p-2">Preview Changes</button> <br />
+                <form action="" method="post">
+                    <ul>
+                     <li class="mb-2"><i class="fas fa-thermometer-three-quarters"></i> Status : <span>Published </span><a href="#">Edit</a></li>
+                     <li class="mb-2"><i class="fas fa-eye"></i> Visibility: <span>Public</span> <a href="#"> Edit </a></li>
+                     <li class="mb-2"><i class="fas fa-calendar-week"></i> Published on: <span>Apr 29, 2016 at 09:44</span> <a href="#">Edit </a></li>
+                    </ul>
+                  
+             <hr>
+
+             <input type="submit" value="Update" name="" class="btn btn-primary mb-2 mt-2">
+                    
+
+    </form>
+                </div>
+            </div>
+        </div>
+     </div>
+     <!-- publish ends -->
+     </div>
+     <!-- Shipment categories end -->
+
+     
+          
+        </div>
+  <!-- Go cargo shipment information ends -->
+  <div class="col-lg-12 col-12 layout-spacing mt-3">
+    <div class="statbox widget box box-shadow">
+<h4 class="mt-2">GoCargo Shipment Information</h4>
+<form action="post" class="horizontal">
+<div class="widget-content widget-content-area">
+    <ul class="nav nav-tabs  mb-3 mt-3 nav-fill" id="justifyTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="justify-home-tab" data-toggle="tab" href="#justify-home" role="tab" aria-controls="justify-home" aria-selected="true">Shipper Information</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="justify-profile-tab" data-toggle="tab" href="#justify-profile" role="tab" aria-controls="justify-profile" aria-selected="false">Receiver Information</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="justify-contact-tab" data-toggle="tab" href="#justify-contact" role="tab" aria-controls="justify-contact" aria-selected="false">Shipment Information</a>
+        </li>
+    </ul>
+    
+    <div class="tab-content" id="justifyTabContent">
+        <div class="tab-pane fade show active" id="justify-home" role="tabpanel" aria-labelledby="justify-home-tab">
+            <label for="basic-url">Shipper Name</label>
+            <div class="input-group mb-4">
+              <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+           
+            <label for="basic-url">Phone</label>
+            <div class="input-group mb-5">
+              <input type="text" class="form-control" placeholder="phone" aria-label="Date" aria-describedby="basic-addon2">
+              
+            </div>
+
+            <label for="basic-url">Address</label>
+            <div class="input-group mb-4">
+              <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+            
+
+            <label for="basic-url">Email</label>
+            <div class="input-group mb-4">
+              <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+
+            <div class="n-chk">
+                <label class="new-control new-checkbox checkbox-primary">
+                  <input type="checkbox" class="new-control-input" checked>
+                  <span class="new-control-indicator"></span>Show Shipper Information
+            </div>
+        </div>
+        <div class="tab-pane fade" id="justify-profile" role="tabpanel" aria-labelledby="justify-profile-tab">
+            <label for="basic-url">Receiver Name</label>
+            <div class="input-group mb-4">
+              <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+           
+            <label for="basic-url">Phone</label>
+            <div class="input-group mb-5">
+              <input type="text" class="form-control" placeholder="phone" aria-label="Date" aria-describedby="basic-addon2">
+              
+            </div>
+
+            <label for="basic-url">Address</label>
+            <div class="input-group mb-4">
+              <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+            
+
+            <label for="basic-url">Email</label>
+            <div class="input-group mb-4">
+              <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+
+            <div class="n-chk">
+                <label class="new-control new-checkbox checkbox-primary">
+                  <input type="checkbox" class="new-control-input" checked>
+                  <span class="new-control-indicator"></span>Show Receiver Information
+            </div>
+        </div>
+        <div class="tab-pane fade" id="justify-contact" role="tabpanel" aria-labelledby="justify-contact-tab">
+         
+            <label for="basic-url">Weight</label>
+            <div class="input-group mb-5">
+              <input type="text" class="form-control" aria-label="Date" aria-describedby="basic-addon2">
+              
+            </div>
+
+            <label for="basic-url">Courier</label>
+            <div class="input-group mb-5">
+              <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
+              
+            </div>
+
+            <label for="basic-url">Packages</label>
+            <div class="input-group mb-5">
+              <input type="text" class="form-control" aria-label="Date" aria-describedby="basic-addon2">
+              
+            </div>
+
+            <label for="basic-url">Mode</label>
+            <div class="input-group mb-5">
+              <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
+              
+            </div>
+
+            <label for="basic-url">Product</label>
+            <div class="input-group mb-5">
+              <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
+              
+            </div>
+
+            <label for="basic-url">Quantity</label>
+            <div class="input-group mb-5">
+              <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
+              
+            </div>
+
+            <label for="basic-url">Payment Mode</label>
+            <div class="input-group mb-5">
+              <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
+              
+            </div>
+
+            <label for="basic-url">Total Freight</label>
+            <div class="input-group mb-5">
+              <input type="text" class="form-control" aria-label="Date" aria-describedby="basic-addon2">
+              
+            </div>
+
+            <label for="basic-url">Carrier</label>
+            <div class="input-group mb-5">
+              <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
+              
+            </div>
+
+            <label for="basic-url">Carrier Reference Number</label>
+            <div class="input-group mb-5">
+              <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
+              
+            </div>
+
+            <label for="basic-url">Departure Time</label>
+            <div class="input-group mb-5">
+              <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
+              
+            </div>
+
+            <label for="basic-url">Orgin</label>
+            <div class="input-group mb-5">
+              <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
+              
+            </div>
+
+            <label for="basic-url">Destination</label>
+            <div class="input-group mb-5">
+              <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
+              
+            </div>
+
+            <label for="basic-url">Pickup Date</label>
+            <div class="input-group mb-5">
+              <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
+              
+            </div>
+
+            <label for="basic-url">Pickup Time</label>
+            <div class="input-group mb-5">
+              <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
+              
+            </div>
+
+            <label for="basic-url">Status</label>
+            <div class="input-group mb-4">
+              <select class="selectpicker" data-width="fit">
+                  <option value="pending">Pending</option>
+                  <option value="accepted">Accepted</option>
+                  <option value="processing">Processing</option>
+                  <option value="Delivered">Delivered</option>
+                  
+              </select>
+            </div>
+
+
+            <label for="basic-url">Expected Delivery Date</label>
+            <div class="input-group mb-5">
+              <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
+              
+            </div>
+            <label for="basic-url">Comments</label>
+            <div class="input-group mb-4">
+              <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+
+            
+            <label for="basic-url">Agent Name</label>
+            <div class="input-group mb-5">
+              <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
+              
+            </div>
+
+            
+            <label for="basic-url">Type of Shipment</label>
+            <div class="input-group mb-5">
+              <input type="text" class="form-control"  aria-label="Date" aria-describedby="basic-addon2">
+              
+            </div>
+         
+
+            <div class="n-chk">
+                <label class="new-control new-checkbox checkbox-primary">
+                  <input type="checkbox" class="new-control-input" checked>
+                  <span class="new-control-indicator"></span>Show Shipment Information
+            </div>
+        </div>
+    </div>
+           </div>
+
+</form>
+
+
+</div>
+</div>
+                <!-- Go cargo shipment information ends -->
       </div>
       <!--  END CONTENT AREA  -->
     </div>
@@ -1284,6 +1390,7 @@
       <script src="plugins/bootstrap-select/bootstrap-select.min.js"></script>
 
      <script src="assets/js/new_field.js"></script>
+     <script src="assets/js/components/ui-accordions.js"></script>
 
 
   </body>
